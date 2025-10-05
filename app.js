@@ -33,11 +33,18 @@ const teamData = [
         "email": "dukanallp@gmail.com"
     },
     {
-        "name": "Noriko Suzuki",
-        "role": "Project Member, Business Strategy and Visibility",
-        "organization": "Auto, Energy & Electronics Leader, IBM Institute for Business Value",
-        "email": "suzuki@smanagement.net"
+        "name": "Naomi Hatanaka",
+        "role": "Project Member, Research Methods",
+        "organization": "Assistant Professor at National University of Singapore",
+        "email": "hanakata@nus.edu.sg"
     },
+    {
+        "name": "Roli Mahajan",
+        "role": "Project Member, Knowledge Management and Communication", 
+        "organization": "Independent Journalist and Consultant, Development and Cooperation Magazine",
+        "email": "Roli.undp@gmail.com"
+    },
+    
     {
         "name": "Atoka Jo",
         "role": "Project Member, Safety, Security and Wellbeing Analysis", 
