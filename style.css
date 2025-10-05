@@ -765,6 +765,15 @@ body {
   background: var(--color-surface);
   box-shadow: var(--shadow-md);
 }
+/* Default (hero) state */
+.navbar .nav-link { color: var(--color-cream-50); }
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: var(--color-primary); }
+.navbar .nav-toggle span { background: var(--color-cream-50); }
+
+/* Scrolled state */
+.navbar.scrolled .nav-link { color: var(--color-text); }
+.navbar.scrolled .nav-toggle span { background: var(--color-text); }
 
 .nav-content {
   display: flex;
@@ -849,7 +858,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.1;
+  opacity: 0.08;
   background-image: url('https://pplx-res.cloudinary.com/image/upload/v1754989633/pplx_project_search_images/38edd6f46054e052b4022e2eaaea65ce90471df3.png');
   background-size: cover;
   background-position: center;
@@ -1044,6 +1053,32 @@ section {
 .objective-icon {
   font-size: var(--font-size-xl);
 }
+.project-video {
+  padding: var(--section-padding) 0;
+  background: var(--color-surface);
+}
+
+.project-video .section-header {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 /* Data Integration Diagram */
 .data-integration-diagram {
@@ -1220,7 +1255,7 @@ section {
 
 .map-placeholder {
   height: 400px;
-  background-image: url('https://pplx-res.cloudinary.com/image/upload/v1754736785/pplx_project_search_images/7b7f34a3895abe881a08df37e41cba870d09c96f.png');
+  background-image: url('https://i.ibb.co/xqGLXzMx/995e3aa4-9e11-4eb2-aa13-02cda6add081.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1598,6 +1633,18 @@ section {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   margin: 0;
+}
+.support-note {
+  padding: var(--space-16) 0;
+  text-align: center;
+  color: var(--color-gray-400);
+}
+
+.support-note a {
+  color: var(--color-primary);
+}
+.support-note a:hover {
+  color: var(--color-primary-hover);
 }
 
 .contact-card {
