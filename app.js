@@ -26,7 +26,6 @@ const teamData = [
         "organization": "Auto, Energy & Electronics Leader, IBM Institute for Business Value",
         "email": "suzuki@smanagement.net"
     },
-    
     {
         "name": "Daisuke Masabuchi",
         "role": "Project Member, Data Analysis and Platform Development",
