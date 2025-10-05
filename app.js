@@ -21,6 +21,13 @@ const teamData = [
         "email": "Roli.undp@gmail.com"
     },
     {
+        "name": "Noriko Suzuki",
+        "role": "Project Member, Business Strategy and Visibility", 
+        "organization": "Auto, Energy & Electronics Leader, IBM Institute for Business Value",
+        "email": "suzuki@smanagement.net"
+    },
+    
+    {
         "name": "Daisuke Masabuchi",
         "role": "Project Member, Data Analysis and Platform Development",
         "organization": "CTO, Nobishiro", 
@@ -39,13 +46,6 @@ const teamData = [
         "email": "hanakata@nus.edu.sg"
     },
     {
-        "name": "Roli Mahajan",
-        "role": "Project Member, Knowledge Management and Communication", 
-        "organization": "Independent Journalist and Consultant, Development and Cooperation Magazine",
-        "email": "Roli.undp@gmail.com"
-    },
-    
-    {
         "name": "Atoka Jo",
         "role": "Project Member, Safety, Security and Wellbeing Analysis", 
         "organization": "Himeji Jogakuin Liberal Arts Summer Program",
@@ -53,14 +53,6 @@ const teamData = [
     }
 ];
 
-// Mock park data for visualization
-const parkData = [
-    {"name": "Central Park Tokyo", "lat": 35.6762, "lng": 139.6503, "accessibility": 4.2, "improvements": "Accessible pathways added"},
-    {"name": "Hibiya Park", "lat": 35.6743, "lng": 139.7597, "accessibility": 3.8, "improvements": "Tactile guidance system"},
-    {"name": "Lodhi Gardens Delhi", "lat": 28.5931, "lng": 77.2197, "accessibility": 3.5, "improvements": "Wheelchair ramps installed"},
-    {"name": "Cubbon Park Bangalore", "lat": 12.9716, "lng": 77.5946, "accessibility": 3.9, "improvements": "Audio guidance system"},
-    {"name": "Marine Drive Mumbai", "lat": 18.9441, "lng": 72.8206, "accessibility": 4.1, "improvements": "Accessible seating areas"}
-];
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
