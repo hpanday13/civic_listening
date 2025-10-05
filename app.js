@@ -58,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.lucide && typeof lucide.createIcons === 'function') { lucide.createIcons(); }
     initializeNavigation();
     populateTeamMembers();
-    createAccessibilityChart();
-    initializeMapPoints();
     initializeCounters();
     initializeNewsletter();
     initializeSmoothScrolling();
@@ -502,10 +500,8 @@ document.addEventListener('click', function(e) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         teamData,
-        parkData,
         initializeNavigation,
         populateTeamMembers,
-        createAccessibilityChart,
         updateActiveNavLink
     };
 }
