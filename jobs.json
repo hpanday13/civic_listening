@@ -1,0 +1,33 @@
+{
+  "filterOptions": [
+    { "value": "all", "label": "All vacancies" },
+    { "value": "open", "label": "Open vacancies" },
+    { "value": "closed", "label": "Closed vacancies" }
+  ],
+  "jobs": [
+    {
+      "id": "ux-researcher",
+      "title": "UX Researcher (Accessibility)",
+      "team": "ParkAble",
+      "location": "Tokyo / Remote",
+      "status": "open",
+      "statusLabel": "Open"
+    },
+    {
+      "id": "data-engineer",
+      "title": "Data Engineer",
+      "team": "Platform Development",
+      "location": "Bengaluru / Remote",
+      "status": "open",
+      "statusLabel": "Open"
+    },
+    {
+      "id": "community-liaison",
+      "title": "Community Liaison",
+      "team": "Field Operations",
+      "location": "Kyoto",
+      "status": "closed",
+      "statusLabel": "Closed"
+    }
+  ]
+}
