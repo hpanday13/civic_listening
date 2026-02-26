@@ -57,7 +57,6 @@ const teamData = [
 document.addEventListener('DOMContentLoaded', function() {
     if (window.lucide && typeof lucide.createIcons === 'function') { lucide.createIcons(); }
     initializeNavigation();
-    initializeVacancies();
     populateTeamMembers();
     createAccessibilityChart();
     initializeMapPoints();
@@ -65,64 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNewsletter();
     initializeSmoothScrolling();
 });
-
-async function initializeVacancies() {
-    const filterSelect = document.getElementById('vacancy-status-filter');
-    const vacanciesList = document.getElementById('vacancies-list');
-    if (!filterSelect || !vacanciesList) return;
-
-    try {
-        const response = await fetch('jobs.json');
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-        const jobsData = await response.json();
-        const filterOptions = jobsData.filterOptions || [];
-        const jobs = jobsData.jobs || [];
-
-        filterSelect.innerHTML = '';
-
-        filterOptions.forEach(option => {
-            const optionElement = document.createElement('option');
-            optionElement.value = option.value;
-            optionElement.textContent = option.label;
-            filterSelect.appendChild(optionElement);
-        });
-
-        const renderJobs = (selectedStatus) => {
-            const filteredJobs = selectedStatus === 'all'
-                ? jobs
-                : jobs.filter(job => job.status === selectedStatus);
-
-            vacanciesList.innerHTML = '';
-
-            if (!filteredJobs.length) {
-                vacanciesList.innerHTML = '<p class="vacancy-empty">No vacancies found for this status.</p>';
-                return;
-            }
-
-            filteredJobs.forEach(job => {
-                const card = document.createElement('article');
-                card.className = 'vacancy-card';
-                card.innerHTML = `
-                    <div class="vacancy-card-header">
-                        <h3>${job.title}</h3>
-                        <span class="vacancy-status ${job.status}">${job.statusLabel}</span>
-                    </div>
-                    <p class="vacancy-team">${job.team}</p>
-                    <p class="vacancy-location">${job.location}</p>
-                `;
-
-                vacanciesList.appendChild(card);
-            });
-        };
-
-        filterSelect.addEventListener('change', () => renderJobs(filterSelect.value));
-        renderJobs(filterSelect.value || 'all');
-    } catch (error) {
-        vacanciesList.innerHTML = '<p class="vacancy-empty">Unable to load vacancies right now.</p>';
-        console.error('Failed to initialize vacancies:', error);
-    }
-}
 
 // Navigation functionality
 function initializeNavigation() {
